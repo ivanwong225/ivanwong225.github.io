@@ -1,0 +1,21 @@
+<div class="stream">
+  <span class="navCategory">Where I've Been&What I Thought</span>
+  <div ng-scroll-footer="loadMore">
+    <div class='row' ng-repeat='viewRow in viewable'>
+      <div class='{{"col-sm-" + (12 / rowSize)}}'
+           ng-repeat='view in viewRow' >
+        <div ng-include src="'sourcetemps/primary.html?1'"
+             class="event">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .stream {
+    margin-left: 10%;
+    width: 80%;
+    margin-right: 10%;
+  }
+</style>
