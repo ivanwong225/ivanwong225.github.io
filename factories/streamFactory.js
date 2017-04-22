@@ -1,6 +1,6 @@
 var app = angular.module('myApp');
 
-app.factory('photoFactory', function() {
+app.factory('streamFactory', function() {
   var service = {};
 
   service.addToView = function(source, viewArray, numberToAdd, rowSize, offset) {
