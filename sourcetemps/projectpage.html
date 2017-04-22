@@ -1,0 +1,58 @@
+<div class="project-page-template">
+  <div class="project-page-photos">
+    <img ng-repeat="image in project.images"
+         ng-src="{{image}}"
+         class="project-page-photo fadein"/>
+  </div>
+  <div class="project-page-text">
+    <p class="largeCapBold">{{project.title}}</p>
+    <div class="caption-container">
+      <span>{{project.date}}</span>
+      <span ng-repeat="link in project.links">
+        /
+        <a ng-href="{{link.url}}"
+           target="_blank"
+           class="project-page-link">
+           {{link.source}}
+        </a>
+      </span>
+      <br>
+      <p>{{project.description}}</p>
+      <div class="project-page-detail"
+           ng-repeat="detail in project.details">
+        <p class="smallCapBold">{{detail.header}}</p>
+        <span>{{detail.explanation}}</span>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .project-page-template {
+    display: flex;
+    flex-direction: row;
+  }
+  .project-page-photos {
+    flex: 1 50%;
+  }
+  .project-page-photo {
+    width: 100%;
+  }
+  .project-page-text {
+    flex: 2 50%;
+    margin: 0 15px;
+  }
+  .project-page-link {
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+  }
+  @media only screen and (max-width: 700px) {
+    .project-page-template {
+      flex-direction: column;
+    }
+  }
+</style>
