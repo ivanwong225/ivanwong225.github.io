@@ -3,22 +3,22 @@ var app = angular.module('myApp', ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl : 'views/home.html',
+      templateUrl : 'view/home.html',
       controller  : 'HomeController'
     })
     .when('/myself/projects', {
-      templateUrl : 'views/projects.html',
+      templateUrl : 'view/projects.html',
       controller  : 'ProjectController'
     })
     .when('/myself/projects/:index', {
-      templateUrl : 'templates/projectPage.tpl.html',
+      templateUrl : 'sourcetemps/projectpage.html',
       controller  : 'ProjectPageController'
     })
     .when('/myself/school', {
-      templateUrl : 'views/school.html'
+      templateUrl : 'view/school.html'
     })
     .when('/wibwit', {
-      templateUrl : 'templates/stream.tpl.html',
+      templateUrl : 'sourcetemps/primary.html',
       controller  : 'StreamController',
       resolve : {
         events : function(eventsFactory) {
@@ -27,25 +27,25 @@ app.config(function($routeProvider) {
       }
     })
     .when('/wibwit/food', {
-      templateUrl : 'templates/stream.tpl.html',
+      templateUrl : 'sourcetemps/primary.html',
       controller  : 'StreamController',
       resolve : { 
         events : function(eventsFactory) {
-          return eventsFactory.getFood('json/events.json');
+          return eventsFactory.getFood('jsonobjs/primary.json');
         }
       }
     })
     .when('/wibwit/places', {
-      templateUrl : 'templates/stream.tpl.html',
+      templateUrl : 'sourcetemps/primary.html',
       controller  : 'StreamController',
       resolve : { 
         events : function(eventsFactory) {
-          return eventsFactory.getPlaces('json/events.json');
+          return eventsFactory.getPlaces('jsonobjs/primary.json');
         }
       }
     })
     .when('/contact', {
-      templateUrl : 'views/contact.html'
+      templateUrl : 'view/contact.html'
     })
 });
 
