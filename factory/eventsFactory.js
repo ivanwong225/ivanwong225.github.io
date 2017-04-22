@@ -1,6 +1,6 @@
 var app = angular.module('myApp');
 
-app.factory('primaryFactory', ['$q', '$http', 'filterFilter', function ($q, $http, filterFilter) {
+app.factory('eventsFactory', ['$q', '$http', 'filterFilter', function ($q, $http, filterFilter) {
   var service = {};
 
   service.getEvents = function (path) {
