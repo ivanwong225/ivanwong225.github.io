@@ -7,19 +7,19 @@
 
     <!-- app -->
     <script type="text/javascript" src="myApp.js"></script>
-    <script type="text/javascript" src="controllers/navigationCtrl.js"></script>
-    <script type="text/javascript" src="controllers/homeCtrl.js"></script>
-    <script type="text/javascript" src="controllers/streamCtrl.js"></script>
-    <script type="text/javascript" src="controllers/projectsCtrl.js"></script>
-    <script type="text/javascript" src="controllers/projectPageCtrl.js"></script>
-    <script type="text/javascript" src="services/navigationConfigSvc.js"></script>
-    <script type="text/javascript" src="factories/eventsFactory.js"></script>
-    <script type="text/javascript" src="factories/streamFactory.js"></script>
+    <script type="text/javascript" src="controller/navigation.js"></script>
+    <script type="text/javascript" src="controller/home.js"></script>
+    <script type="text/javascript" src="controller/visuals.js"></script>
+    <script type="text/javascript" src="controller/indvproject.js"></script>
+    <script type="text/javascript" src="controller/projects.js"></script>
+    <script type="text/javascript" src="service/navigatorService.js"></script>
+    <script type="text/javascript" src="factory/primaryFactory.js"></script>
+    <script type="text/javascript" src="factory/photoFactory.js"></script>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-    <link rel="stylesheet" type="text/css" href="css/grid12.css" />
-    <link rel="stylesheet" type="text/css" href="css/event.css"  />
+    <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrapgrid12.css" />
+    <link rel="stylesheet" type="text/css" href="css/primary.css"  />
     <link rel="stylesheet" type="text/css" href="css/fadein.css" />
 
     <!-- title -->
@@ -33,13 +33,12 @@
     <div id="header">
       <a href="#/"><img id="logo" src="images/FRANK.png"/></a>
     </div>
-    <div id="navbar" ng-controller="NavigationController as navigation">
+    <div id="navbar" ng-controller="navigation as navigation">
       <ul class="navSection" ng-repeat="section in navigation.sections">
         <li class="navCategory"><a ng-href="#/{{section.path}}">{{section.category}}</a></li>
         <li class="navSubsection" ng-repeat="subsection in section.subsections">
           <a ng-href="#/{{subsection.path}}">{{subsection.label}}</a>
         </li>
-        <div class="emptyDivider">
       </ul>
     </div>
     <div id="main">
