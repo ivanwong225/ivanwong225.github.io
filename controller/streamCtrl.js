@@ -1,13 +1,13 @@
 var app = angular.module('myApp');
 
-app.controller('StreamController', ['$scope', '$http', 'primaryFactory', 'events', 'photoFactory', 'filterFilter', function($scope, $http, primaryFactory, primary, photoFactory, filterFilter) {
+app.controller('StreamController', ['$scope', '$http', 'eventsFactory', 'events', 'streamFactory', 'filterFilter', function($scope, $http, eventsFactory, events, streamFactory, filterFilter) {
   $scope.rowSize = 2;
-  $scope.primary = primary;
+  $scope.events = events;
    // filterFilter(events, {category:'food'});
 
   $scope.viewable = [];
-  var initCap = $scope.events.length > 6 ? 6 : $scope.primary.length;
-  photoFactory.addToView($scope.primary, $scope.viewable, initCap, $scope.rowSize, 0);
+  var initCap = $scope.events.length > 6 ? 6 : $scope.events.length;
+  streamFactory.addToView($scope.events, $scope.viewable, initCap, $scope.rowSize, 0);
 
   $scope.isSelected = function(viewRow, viewIndex, imageIndex) {
     return $scope.viewable[viewRow][viewIndex].selected == imageIndex;
@@ -20,8 +20,8 @@ app.controller('StreamController', ['$scope', '$http', 'primaryFactory', 'events
 
   $scope.loadMore = function() {
     var offset = $scope.rowSize * $scope.viewable.length
-    if(offset < $scope.primary.length) {
-      photoFactory.addToView($scope.events, $scope.viewable, 2, $scope.rowSize, offset);
+    if(offset < $scope.events.length) {
+      streamFactory.addToView($scope.events, $scope.viewable, 2, $scope.rowSize, offset);
     }
   };
 }]);
