@@ -5,7 +5,7 @@ app.controller('ProjectPageController', ['$scope', '$http', '$routeParams', func
   $scope.projects = [];
   $scope.index = $routeParams.index;
 
-  $http({method: 'GET', url: 'json/projects.json'}).success(function(response) {
+  $http({method: 'GET', url: 'jsonobjs/project.json'}).success(function(response) {
     $scope.projects = response.projects;
     $scope.project = $scope.projects[$scope.index];
   });
