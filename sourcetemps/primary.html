@@ -1,0 +1,48 @@
+<div>
+  <img class='fadein eventImageSpaced'
+       ng-src='{{view.images[view.selected]}}'/>
+  <div class="caption-container">
+    <span class="caption">{{view.captions[view.selected]}}</span>
+    <br>
+    <span>- {{view.date | date:'mediumDate'}}</span>
+    <br>
+    <span class="place">{{view.place}}</span>
+    <br>
+    <span class="location">{{view.location}}</span>
+    <br>
+    <button ng-class="{ viewButton:!isSelected($parent.$parent.$parent.$index,
+                                               $parent.$index,
+                                               $index),
+                        viewButtonActive:isSelected($parent.$parent.$parent.$index,
+                                                    $parent.$index,
+                                                    $index) }"
+            ng-click="select($parent.$parent.$parent.$index,
+                             $parent.$index,
+                             $index)"
+            ng-repeat="image in view.images">
+      {{$index + 1}}
+    </button>
+  </div>
+</div>
+
+<style>
+.eventImageSpaced {
+  width: 100%;
+}
+.viewButton {
+  height: 35px;
+  width: 30px;
+  border: none;
+  background-color: white;
+}
+.viewButton:hover {
+  background-color: #cccccc;
+}
+.viewButtonActive {
+  height: 35px;
+  width: 30px;
+  border: none;
+  background-color: #aaaaaa;
+  color: white;
+}
+</style>
