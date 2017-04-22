@@ -22,7 +22,7 @@ app.config(function($routeProvider) {
       controller  : 'StreamController',
       resolve : {
         events : function(eventsFactory) {
-          return eventsFactory.getEvents('json/events.json');
+          return eventsFactory.getEvents('jsonobjs/primary.json');
         }
       }
     })
