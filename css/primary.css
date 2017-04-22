@@ -1,0 +1,14 @@
+.event {
+    text-align: center;
+}
+
+.caption-container {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 12px;
+  font-weight: normal;
+  padding-bottom: 30px;
+}
+
+.caption, .project-title {
+  text-transform: uppercase;
+}
