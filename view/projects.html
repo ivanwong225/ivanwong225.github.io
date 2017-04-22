@@ -1,0 +1,21 @@
+<div id="projects-view">
+  <span class="largeCapBold">Projects</span>
+  <div class='row' ng-repeat="projectRow in projects">
+    <div class="col-sm-6" ng-repeat='project in projectRow'>
+      <a href="#/myself/projects/{{$parent.$index * 2 + $index}}">
+        <div ng-include src="'templates/project.tpl.html?1'"
+             onload="project = project"
+             class="event">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+#projects-view {
+  margin-left: 10%;
+  width: 80%;
+  margin-right: 10%;
+}
+</style>
