@@ -1,0 +1,125 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 200px;
+  bottom: 0;
+  margin: 0 0 0 200px !important;
+  padding: 100px 45px 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navSection {
+  list-style-type: none;
+  margin: 0;
+}
+
+.navCategory, .largeCapBold {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.navSubsection, .smallCap {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-left: 10px;
+  margin: 5px 0;
+}
+
+.smallCapBold {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+.smallFont {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#header {
+  background: white;
+  padding: 80px 50px 85px 85px;
+  height: 33px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+}
+
+#logo {
+  height:22px;
+}
+
+.emptyDivider {
+  height: 20px;
+}
+
+#navbar {
+  padding: 30px 50px 40px 45px;
+  float: left;
+  width: 75px;
+  position: fixed;
+  left: 0;
+  margin-top: 165px;
+  height: 100%;
+}
+
+#main {
+  flex: 1;
+  margin-left: 200px;
+  padding: 165px 45px 0 0;
+}
+
+.outline {
+  position: fixed;
+  background-color: black;
+  z-index: 9999;
+}
+
+#outline-top {
+  width: 100%;
+  height: 3px;
+  top: 0;
+}
+
+#outline-bottom {
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+}
+
+#outline-left {
+  width: 3px;
+  height: 100%;
+  left: 0;
+}
+
+#outline-right {
+  width: 3px;
+  height: 100%;
+  right: 0;
+}
